@@ -1,0 +1,22 @@
+
+############################################################
+#  lazyRLGYM — Starting RL Training Loop
+#  Model: deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
+#  Max iterations: 1
+#  Judge mode: rule
+############################################################
+
+  Loaded 20 prompts (16 train, 4 held-out)
+
+############################################################
+#  ITERATION 0
+############################################################
+
+  [Phase 1] Generating rollouts (transformers)...
+[Rollout] Loading model from deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B (dtype=bfloat16) ...
+C:\Users\kovax\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\file_download.py:143: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\kovax\.cache\huggingface\hub\models--deepseek-ai--DeepSeek-R1-Distill-Qwen-1.5B. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+[VRAM] Loaded 'policy'. Now: {'allocated': 3391.27685546875, 'reserved': 3580.0, 'free': 8896.22314453125, 'total': 12287.5}
+[Rollout] Model loaded and ready.
+    10/16 prompts done | VRAM: 3399MB

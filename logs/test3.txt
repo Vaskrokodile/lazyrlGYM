@@ -1,0 +1,64 @@
+============================================================
+  lazyRLGYM — End-to-End Smoke Test
+============================================================
+
+[Test 1] Loading model and generating a response...
+[Rollout] Loading tokenizer from E:\lazyRLGYM\data\model_cache ...
+[Rollout] Loading model (bfloat16) from E:\lazyRLGYM\data\model_cache ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+[VRAM] Loaded 'policy'. Now: {'allocated': 3391.27685546875, 'reserved': 3580.0, 'free': 8896.22314453125, 'total': 12287.5}
+  Model loaded successfully.
+  Generated 2 samples
+  Sample 0: thinking=0tok answer=153tok
+    Thinking: ...
+    Answer: I need to calculate the sum of 2 and 3.
+
+First, I will identify the two numbers involved in the addition: 2 and 3.
+
+Next, I will perform the addition 
+  Sample 1: thinking=0tok answer=153tok
+    Thinking: ...
+    Answer: I need to calculate the sum of 2 and 3.
+
+First, I will identify the numbers involved in the addition: 2 and 3.
+
+Next, I will perform the addition by c
+[VRAM] Unloaded 'policy'. Now: {'allocated': 3399.40185546875, 'reserved': 3600.0, 'free': 8888.09814453125, 'total': 12287.5}
+[Rollout] Model unloaded.
+  [PASS] Model loads and generates.
+
+[Test 2] Difficulty estimation...
+  Easy test: difficulty=easy, confidence=1.00
+  Hard test: difficulty=hard, confidence=0.00
+  [PASS] Difficulty estimation works.
+
+[Test 3] Reward shaping...
+  Easy+short+correct: reward=1.450
+  Easy+long+correct:  reward=-2.250
+  Hard+short:         reward=-1.300
+  Hard+optimal+correct: reward=1.450
+  [PASS] Reward shaping works correctly.
+
+[Test 4] Preference pair construction...
+  Built 1 preference pairs
+  Chosen score: 1.50
+  Rejected score: 0.10
+  [PASS] Preference pairs work.
+
+[Test 5] Prompt bank...
+  Got 10 prompts
+  Difficulties: ['easy', 'medium', 'hard', 'easy', 'medium', 'hard', 'easy', 'medium', 'hard', 'easy']
+  [PASS] Prompt bank works.
+
+[Test 6] Rule-based judge...
+  Math judge: correctness=0.00 quality=0.32
+  [PASS] Rule-based judge works.
+
+============================================================
+  ALL TESTS PASSED
+  Pipeline is ready to run!
+============================================================
+
+  To start training:
+    cd E:\lazyRLGYM
+    python orchestrator.py --no-sft --judge rule --iterations 1

@@ -1,0 +1,18 @@
+
+############################################################
+#  lazyRLGYM — Starting RL Training Loop
+#  Model: E:\lazyRLGYM\data\model_cache
+#  Max iterations: 1
+#  Judge mode: rule
+############################################################
+
+  Loaded 20 prompts (16 train, 4 held-out)
+
+############################################################
+#  ITERATION 0
+############################################################
+
+  [Phase 1] Generating rollouts (transformers)...
+[Rollout] Loading model from E:\lazyRLGYM\data\model_cache (dtype=bfloat16) ...
+[VRAM] Loaded 'policy'. Now: {'allocated': 3391.27685546875, 'reserved': 3580.0, 'free': 8896.22314453125, 'total': 12287.5}
+[Rollout] Model loaded and ready.

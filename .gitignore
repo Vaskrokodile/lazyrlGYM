@@ -1,0 +1,41 @@
+# Model checkpoints (multi-GB)
+checkpoints/
+
+# Model cache (multi-GB)
+data/model_cache/
+
+# Training logs
+logs/*.log
+logs/*.json
+
+# Data cache (preference pairs, intermediate data)
+data/cache/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Temporary files
+*.tmp
+temp_read*.log
